@@ -1,0 +1,86 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>node</title>
+</head>
+
+<body>
+    {{>header}}
+    <h1>hbs home bage</h1>
+
+    <div class="container my-5">
+        <form action="" id="myForm" class="center">
+            <label for="" class="form-label fs-3">Enter A Country</label>
+            <input type="text" class="form-control mb-3" id="address">
+            <button type="submit" class="btn btn-primary">search</button>
+
+            <div>
+                <p id="location"></p>
+                <p id="forecast"></p>
+                <p id="error"></p>
+
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            {{#each data}}
+            <div class="col-4">
+                <div class="card bg-dark text-white mb-3" style="width: 18rem;">
+                    <img src={{this.urlToImage}} class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Posted By {{this.author}}</h5>
+                        <p class="card-text">{{this.description}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+            {{#each data}}
+            <div class="col-4">
+                <div class="card bg-dark text-white mb-3" style="width: 18rem;">
+                    <img src={{this.urlToImage}} class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Posted By {{this.author}}</h5>
+                        <p class="card-text">{{this.description}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+            {{#each data}}
+            <div class="col-4">
+                <div class="card bg-dark text-white mb-3" style="width: 18rem;">
+                    <img src={{this.urlToImage}} class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Posted By {{this.author}}</h5>
+                        <p class="card-text">{{this.description}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+    </div>
+
+    <h5>{{title}}</h5>
+    {{>footer}}
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
